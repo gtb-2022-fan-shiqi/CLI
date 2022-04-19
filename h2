@@ -1,0 +1,12 @@
+#!/bin/bash
+
+TIMESTAMP=$(date "+%Y-%m-%d %H:%M:%S")
+ID=$1
+NAME=$(grep $ID ./Desktop/ThoughtWorks/Graduates\ Technique\ Bootcamp/CLI/CLI/nickName | cut -d' ' -f2)
+
+if [[ "" == "$NAME" ]]
+then
+   NAME="unknown"
+fi
+
+echo $TIMESTAMP hello $NAME
